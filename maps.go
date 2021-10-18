@@ -1,51 +1,52 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	// map is a data structure that map key to there value
 	// countryPopulation := map[string]int{
-	// 	"brazil": 22345, 
-	// 	"USA":4455,
-	// 	"france":334499,
-		
+	// 	"India":1234, 
+	// 	"USA": 757584, 
+	// 	"france":377840,
+	// 	"canada":122334,
 	// }
 
-	//use cannot use a slice as data type for a map 
+	countryPopulation := make(map[string]int, 10)
 
-	//to  make a map with a make function
+	countryPopulation = map[string]int{
+		"India":1234, 
+		"USA": 757584, 
+		"france":377840,
+		"canada":122334,
+	}
 
-		countryPopulation := make(map[string]int, 10)
+	// fmt.Println(countryPopulation)
+	fmt.Println(countryPopulation["India"])
+	countryPopulation["England"] = 77485
+	fmt.Println(countryPopulation)
+	delete(countryPopulation, "canada")
 
-		countryPopulation = map[string]int{
-		"brazil": 22345, 
-		"USA":4455,
-		"france":334499,
-		}
-	
-	//to add value to a map
-	countryPopulation["Russia"] = 34534
+	//if a kay is not present in a map the result wil be zero
 
+	fmt.Println(countryPopulation["russaia"])
 
-	//to remove value from a map
-	delete(countryPopulation, "USA")
-
-	//if an element do not exist in a map the output is 0
-	fmt.Println(countryPopulation["USA"])
-
-	// temp, ok := countryPopulation["brazil"]
+	//we can check if a value is in a map with the temp, ok function
+	// temp, ok := countryPopulation["USA"]
 	// fmt.Println(temp, ok)
 
-	_, ok := countryPopulation["france"] 
+	// if we wawnt to only check if it is available we use _
+	_ , ok := countryPopulation["USA"]
 	fmt.Println(ok)
-	// fmt.Println(countryPopulation)
+
+	//to print the lengnt of the map
 	fmt.Println(len(countryPopulation))
 
 	cp := countryPopulation
-	delete(countryPopulation, "france")
+	delete(countryPopulation, "India")
 	fmt.Println(cp)
-	fmt.Println(countryPopulation)
+	//the resutl is the same as printing the countryPopulation
 
-	//maps are reference type so any change in it child type will lead to a change in the base type
+	fmt.Println(countryPopulation)
 
 }
