@@ -35,7 +35,7 @@ func main() {
 	}else if q > p && q > r {
 		fmt.Println("q is the biggest")
 	}else{
-		fmt.Println(" r is the biggest  ")
+		fmt.Println(" r is the b iggest  ")
 	}
 
 }
