@@ -10,4 +10,8 @@ func main() {
 	fmt.Printf("keys: %s\n " , k)
 	//%q use double quote while %S uses the single quote
 	}
+
+	for k , v := range m {
+		fmt.Printf("keys: %q, value : %v \n", k, v)
+	}
 }
