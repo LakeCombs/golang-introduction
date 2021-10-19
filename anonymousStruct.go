@@ -9,4 +9,4 @@ func main()  {
 	fmt.Println(aCelebrity)
 	fmt.Println(bCelebrity)
 
-}
+} 
